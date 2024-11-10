@@ -41,9 +41,9 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -74,6 +74,14 @@
 
 .section {
   position: relative;
+
+  &__title {
+    margin: 0 0 50px;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 .section-bg {
@@ -87,8 +95,8 @@
   &:after {
     content: '';
     @extend .section-bg;
-    opacity: .25;
-    //background: $main-first-color-custom;
+    opacity: .75;
+    background: #000000;
     z-index: 0;
   }
 
@@ -103,4 +111,8 @@
 .title {
   font-size: 2.5rem;
   font-weight: $font-weight-normal;
+}
+
+.swiper-container {
+  height: 100%;
 }

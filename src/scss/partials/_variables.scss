@@ -1,15 +1,25 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --body-bg: #111111;
+  --text-color: #ffffff;
+  --header-bg: var(--black);
+  --footer-bg: var(--black);
+  --placeholder-color: #aaaaaa;
+}
+
 // main colors
 $main-first-color: #7a0000;
 $main-second-color: #007d00;
 $main-third-color: #000082;
 
 // colors
-$title-color: #111;
-$text-color: #333;
-$input-placeholder-color: #aaa;
+$title-color: var(--text-color);
+$text-color: var(--text-color);
+$input-placeholder-color: var(--placeholder-color);
 
 // fonts
-$font-family-base: 'Verdana', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
@@ -26,4 +36,5 @@ $transition-base: all .3s ease 0s;
 
 //Bootstrap var
 $enable-shadows: true;
-$body-color: $text-color;
+$body-bg: var(--body-bg);
+$body-color: var(--text-color);

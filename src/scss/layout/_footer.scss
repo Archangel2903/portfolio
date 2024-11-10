@@ -5,6 +5,95 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+  background-color: #000;
+  color: #666;
+  padding: 30px 0 20px;
+
+  .logo {
+    &__text {
+      color: #666666;
+    }
+  }
 }
 
-.copyright {}
+.footer-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 30px;
+
+  &__box {
+    flex: auto 0 0;
+
+    &:first-child {
+      flex: 50% 1 0;
+    }
+  }
+}
+
+.footer-navigation {
+  padding: 0;
+  margin: 0;
+
+  li {
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+    a {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.footer-contacts {
+  padding: 0;
+  margin: 0 0 20px;
+
+  li {
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #ffffff;
+    }
+    a {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+
+  li {
+    a {
+      svg {
+        width: 36px;
+        height: 36px;
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.copyright {
+  margin: 0;
+}
+
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

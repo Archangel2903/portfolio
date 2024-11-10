@@ -1,29 +1,43 @@
 import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
-import 'jquery-ui'
-import 'jquery-ui/ui/effect'
+import Swiper from 'swiper';
 import 'bootstrap';
 import 'popper.js';
-import Swiper from 'swiper/dist/js/swiper.min';
-import noUiSlider from 'nouislider';
 
-$(window).on('load', function () {
+/*$(window).on('load', function () {
     let b = $('body');
-    let pw = $('.preload-wrapper');
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         b.addClass('ios');
     } else {
         b.addClass('web');
     }
-
-    pw.fadeOut(300);
-});
+});*/
 
 $(function () {
+    // Header fixed
+    const header = document.getElementById('header');
+    const content = document.getElementById('content');
+
+    function adjustHeaderOnScroll() {
+        let headerHeight = header.offsetHeight;
+
+        if (window.scrollY > 0 && !header.classList.contains('postition-fixed')) {
+            header.classList.add('position-fixed');
+            content.style.paddingTop = `${headerHeight}px`;
+        }
+        else {
+            header.classList.remove('position-fixed');
+            content.style.paddingTop = '0';
+        }
+    }
+
+    window.addEventListener('scroll', adjustHeaderOnScroll);
+    window.addEventListener('load', adjustHeaderOnScroll);
+
     // Swiper slider
-    if ($('.swiper-container').length) {
+    /*if ($('.swiper-container').length) {
         let slider;
         let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
 
@@ -35,70 +49,21 @@ $(function () {
                 autoplay: true,
                 spaceBetween: 25,
                 slidesPerView: 1,
-                navigation: {
+                /!*navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
-                },
-                pagination: {
+                },*!/
+                /!*pagination: {
                     el: '.swiper-pagination',
                     clickable: true
-                },
-                /*scrollbar: {
+                },*!/
+                /!*scrollbar: {
                     el: '.swiper-scrollbar',
-                },*/
-                dynamicBullets: true,
+                },*!/
+                /!*dynamicBullets: true,*!/
             });
         }
-    }
-
-    // Range slide
-    if ($('input[type="range"]')) {
-        let sliderRange = document.querySelectorAll('.slider-range');
-        let sliderHandles = document.querySelectorAll('.slider-handles');
-
-        if (sliderRange.length) {
-            sliderRange.forEach(function (elem) {
-                let input = elem.childNodes[0];
-                let startValue = input.hasAttribute('value') ? Number(input.getAttribute('value')) : 1;
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [startValue],
-                    step: 1,
-                    behavior: 'tap',
-                    connect: [true, false],
-                    range: {
-                        'min': [minValue],
-                        'max': [maxValue]
-                    }
-                });
-            });
-        }
-
-        if (sliderHandles.length) {
-            sliderHandles.forEach(function (elem) {
-                let input = elem.childNodes[0];
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [minValue, maxValue/2],
-                    step: 1,
-                    behavior: 'tap-drag',
-                    connect: true,
-                    range: {
-                        'min': minValue,
-                        'max': maxValue
-                    }
-                });
-            });
-        }
-    }
+    }*/
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
@@ -118,4 +83,7 @@ $(function () {
             imgObserve.observe(image);
         });
     }
+
+    // Copyright
+    document.getElementById('current_year').textContent = new Date().getFullYear();
 });

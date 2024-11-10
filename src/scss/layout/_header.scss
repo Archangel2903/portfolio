@@ -7,5 +7,113 @@ header.header {
   position: relative;
   min-width: 320px;
   width: 100%;
+  background: #ffffff;
+  padding: 20px 0;
   z-index: 100;
+  transition: $transition-base;
+
+  &.position-fixed {
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 10px -10px #000;
+  }
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  color: red;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  text-underline: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &__text {
+    color: #333333;
+    font-weight: 400;
+  }
+}
+
+.hamburger-menu {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 2px;
+  outline: none;
+
+  &::before, &::after, span {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 2px;
+    background: #333333;
+    transform: translate(-50%, -50%);
+    transition: $transition-base;
+  }
+  &::before {
+    top: 30%;
+  }
+  &::after {
+    top: 70%;
+  }
+}
+
+.navigation-wrapper {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+
+  &__item {}
+  &__link {
+    position: relative;
+    color: #333333 !important;
+    text-decoration: none !important;
+    &::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      background: #333333;
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: $transition-base;
+    }
+
+    &:hover {
+      &::after {
+        width: calc(100% + 6px);
+      }
+    }
+  }
 }

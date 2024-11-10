@@ -1,2 +1,11 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family:'Montserrat';
+  src: url('#{$fonts-path}Montserrat-VariableFont_wght.ttf') format('ttf');
+  font-display: swap;
+  //font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
