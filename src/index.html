@@ -13,7 +13,7 @@
     <header id="header" class="header">
         <div class="container">
             <div class="header-content">
-                <a href="\" class="logo">WEB<span class="logo__text">developer</span></a>
+                <a href="\" class="logo">&lt;WEB <span class="logo__text">developer</span>/&gt;</a>
 
                 <!--<button class="hamburger-menu">
                     <span></span>
@@ -43,11 +43,16 @@
                 <div class="welcome">
                     <p class="welcome__title">Hello! My name is <br>Dmitry Turetsky</p>
 
-                    <div class="welcome__text">I am a web developer with over 10 years of experience in creating responsive and interactive websites using HTML, CSS, and
+                    <div class="welcome__text">I am a web developer with over 9 years of experience in creating responsive and interactive websites using HTML, CSS, and
                         JavaScript. I have worked both independently and as part of a team, delivering projects for various companies and freelance clients. My goal is to
                         build solutions that combine modern technologies with user-friendliness, paying attention to every stage of development—from planning to
                         implementation.
                     </div>
+
+                    <ul class="welcome__list">
+                        <li><a href="./CV-EN.pdf" class="welcome__button" download>Download CV(EN)</a></li>
+                        <li><a href="./CV-RU.pdf" class="welcome__button" download>Download CV(RU)</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -65,7 +70,6 @@
                             <li>HTML5</li>
                             <li>Adaptive/Responsive</li>
                             <li>Cross-browser compatibility</li>
-                            <li>Table layout</li>
                         </ul>
                     </div>
 
@@ -75,9 +79,8 @@
                             positioning of elements.</p>
                         <ul class="skill__list">
                             <li>CSS3</li>
-                            <li>CSS Animation</li>
-                            <li>SASS\LESS</li>
-                            <li>Bootstrap</li>
+                            <li>Flex/Grid</li>
+                            <li>SCSS/LESS</li>
                         </ul>
                     </div>
 
@@ -86,21 +89,20 @@
                         <p class="skill__text">JavaScript adds interactivity to web pages, making them dynamic and engaging. It enables animations, user interactions, and data
                             handling.</p>
                         <ul class="skill__list">
-                            <li>Vanilla JS</li>
+                            <li>JavaScript/ES5/ES6+</li>
                             <li>jQuery</li>
                             <li>WebPack</li>
-                            <li>Learning TypeScript and React</li>
                         </ul>
                     </div>
 
                     <div class="skill__card">
                         <p class="skill__name">Other skills</p>
                         <ul class="skill__list">
+                            <li>Bootstrap</li>
                             <li>BEM</li>
-                            <li>Photoshop</li>
-                            <li>Figma</li>
-                            <li>Support for templates for CMS</li>
-                            <li>Creating a simple chatbot for telegram</li>
+                            <li>Figma/AdobeXD/Zeplin/Photoshop</li>
+                            <li>Telegram Node API</li>
+                            <li>MongoDB</li>
                         </ul>
                     </div>
                 </div>
@@ -113,275 +115,275 @@
 
                 <div class="portfolio">
                     <div class="portfolio__card">
-                        <p class="portfolio__card-name">Lady Prof</p>
-
-                        <p class="portfolio__card-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JS</span>
-                        </p>
-
                         <a href="https://archangel2903.github.io/lady-prof/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Lady Prof</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_01.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">28Days</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/28days/index.html" target="_blank">
+                            <p class="portfolio__card-name">28Days</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_02.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Aersk LTD</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/aerks/index.html" target="_blank">
+                            <p class="portfolio__card-name">Aersk LTD</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_03.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Landing page для семинара</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/seminar/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Landing page для семинара</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_04.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Slot77</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/aerks/index.html" target="_blank">
+                            <p class="portfolio__card-name">Slot77</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_05.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Bonapart</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/bonapart/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Bonapart</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_06.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">NikolinoPark</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/nikolino/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">NikolinoPark</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_07.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Art-Mart</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/art-mart/index.html" target="_blank">
+                            <p class="portfolio__card-name">Art-Mart</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_08.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">HyperC</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/hyperC/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">HyperC</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_09.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">ABU</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/abu/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">ABU</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_10.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Risorio</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/risorio/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Risorio</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_11.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">On Clinic</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/on-clinic/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">On Clinic</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_12.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Space Cabin</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/space-cabin/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Space Cabin</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_13.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">VIZINFORM</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/vizinform/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">VIZINFORM</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_14.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Schemer</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/schemer/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Schemer</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_15.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Art-time-web</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/art-time-web/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Art-time-web</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_16.png') %>" alt="" title="">
                             </picture>
                         </a>
-                    </div>
-
-                    <div class="portfolio__card">
-                        <p class="portfolio__card-name">Mystiwin Landing</p>
 
                         <p class="portfolio__card-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JS</span>
                         </p>
+                    </div>
 
+                    <div class="portfolio__card">
                         <a href="https://archangel2903.github.io/fortune-wheel/dist/index.html" target="_blank">
+                            <p class="portfolio__card-name">Mystiwin Landing</p>
+
                             <picture class="portfolio__card-image">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/job_17.png') %>" alt="" title="">
                             </picture>
                         </a>
+
+                        <p class="portfolio__card-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -394,7 +396,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-content__box">
-                    <a href="#start" class="logo">WEB<span class="logo__text">developer</span></a>
+                    <a href="#start" class="logo">&lt;WEB <span class="logo__text">developer</span>/&gt;</span></a>
                 </div>
 
                 <!--<div class="footer-content__box">

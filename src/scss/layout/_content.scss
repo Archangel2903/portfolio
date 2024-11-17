@@ -22,8 +22,38 @@
     text-transform: uppercase;
   }
   &__text {
+    margin: 0 0 30px;
     font-size: 18px;
     line-height: 1.5;
+  }
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline-flex;
+    }
+  }
+
+  &__button {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px 8px;
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none !important;
+
+    &:hover {
+      background: #333333;
+      color: #ffffff;
+    }
   }
 }
 
@@ -130,6 +160,14 @@
         border-radius: 12px;
         object-fit: cover;
         object-position: center;
+      }
+    }
+    a {
+      &:hover {
+        color: #ffffff;
+        .portfolio__card-name {
+          color: #ffffff;
+        }
       }
     }
   }
